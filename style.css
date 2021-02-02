@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(25, 82, 53);
+}
+.title{
+    text-align: center;
+    justify-content: center;
+    padding: 25px 0;
+}
+.title h1{
+    font-size: 50px;
+    padding: 8px 0;
+    color: rgb(192, 127, 127);
+}
+ span{
+    color: crimson;
+}
+.title p{
+    font-size: 25px;
+    color: #fff;
+}
+.middle{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+   
+}
+
+.card{
+    width: 350px;
+    height: 350px;
+    text-align: center;
+}
+
+.font, .back{
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+    transition: transform .5s linear;
+}
+.font img{
+    height: 100%;
+}
+.font{
+    transform: perspective(600px) rotateY(0deg); 
+}
+.back{
+    transform: perspective(600px) rotateY(180deg);
+    background-color: #311f1f;
+}
+
+.back-conten{
+    color: #2c3e59;
+    text-align: center;
+    width: 100%;
+}
+.back-conten h2{
+    font-size: 40px;
+    color: #fff;
+}
+.back-conten p{
+    font-size: 18px;
+    color: #af3611;
+}
+
+.card:hover > .font{
+    transform: perspective(600px) rotateY(-180deg); 
+}
+
+.card:hover > .back{
+    transform: perspective(600px) rotateY(0deg); 
+}
